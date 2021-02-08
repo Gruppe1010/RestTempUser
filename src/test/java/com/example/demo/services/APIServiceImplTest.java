@@ -26,14 +26,20 @@ class APIServiceImplTest
         assertEquals(10, users.size());
 
         // opgave: Kurtis Weisnat
-
+        
+        String name = "Kurtis Weissnat"
+        String testStr = "";
+        
         for(User user : users)
         {
-            if(user.getName().equals("Kurtis Weissnat"))
+            String testStr1 = user.getName();
+            //System.out.println(user.getName());
+            
+            if(testStr1.equals(name))
             {
-                assertEquals("Kurtis Weissnat", user.getName());
+                testStr = name;
             }
         }
-
+        assertEquals(testStr, name);
     }
 }
